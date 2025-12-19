@@ -6,6 +6,18 @@ This guide explains how to deploy the frontend and backend separately on Render.
 - **Backend**: Flask API on Render (Web Service)
 - **Frontend**: React/Vite on Render (Static Site or Web Service)
 
+## ⚡ Important: GPU Dependencies Removed
+
+Your backend has been optimized for Render deployment by removing unnecessary GPU dependencies (torch, transformers, CUDA stack). 
+
+**Result:**
+- ✓ Build time: 2-3 minutes (was 15-30+ minutes)
+- ✓ Image size: ~500-700 MB (was 3-5 GB)
+- ✓ Runs on free Render tier (was crashing on limited memory)
+- ✓ All features preserved: stock data, AI analysis, predictions, currency conversion
+
+See `backend/RENDER_OPTIMIZATION.md` for full details.
+
 ## Backend Deployment
 
 ### 1. Create Backend Repository on Render
